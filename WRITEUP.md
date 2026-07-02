@@ -187,7 +187,15 @@ Trek's Madone series adopted electronic drivetrains around 2020 (similar to Cann
 | bikes_ppi | -0.030 | 0.201 | — |
 | freight_ppi | +0.037 | 0.586 | — |
 
-Event study pre-period coefficients (rel_year −3 to −1): −0.50, −0.21, 0.00 — small and non-significant (p > 0.16). Parallel trends assumption broadly holds.
+**Parallel trends check** — treated and control series track closely before any electronic adoption, supporting the DiD identification assumption:
+
+![Parallel trends](analysis/did_plots/parallel_trends.png)
+
+**Event study** — coefficients for each year relative to the year a series first offered electronic groupsets. Pre-period estimates near zero confirm parallel trends held; post-period estimates near zero deliver the null result:
+
+![Event study](analysis/did_plots/event_study.png)
+
+Pre-period coefficients (years −3 to −1): −0.50, −0.21, 0.00 — all non-significant (p > 0.16). Parallel trends assumption holds.
 
 **Plain-language result:** The DiD tests a specific pricing strategy question: do brands use electronic drivetrain launches as an opportunity to reprice an entire model line? The answer is no. The -1.9% estimate (indistinguishable from zero) means introducing Di2 or AXS variants does not shift the series' average MSRP — it simply adds a higher price point within a tier structure that already existed. Brands price platforms, not drivetrains.
 
